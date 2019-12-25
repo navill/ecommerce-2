@@ -44,7 +44,6 @@ def cart_item_post_save_receiver(sender, instance, *args, **kwargs):
 
 # -> CartItem.save() 실행된 후, cart_item_post_save_receiver() 실행
 post_save.connect(cart_item_post_save_receiver, sender=CartItem)
-
 post_delete.connect(cart_item_post_save_receiver, sender=CartItem)
 
 
